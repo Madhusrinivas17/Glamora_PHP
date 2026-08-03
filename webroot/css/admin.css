@@ -1,0 +1,142 @@
+/* Glamora Admin Dashboard CSS - Matching Customer White Luxury Theme */
+:root {
+  --sidebar-width: 260px;
+  --admin-bg: #FAF4F6;
+  --sidebar-bg: #FFFFFF;
+  --sidebar-border: #F2E4E8;
+  --sidebar-active-bg: #F4E8EC;
+  --text-dark: #2B151F;
+  --text-muted: #7E6571;
+  --primary-blush: #E87A90;
+}
+
+body.admin-body {
+  background-color: var(--admin-bg);
+  min-height: 100vh;
+}
+
+.admin-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+.admin-sidebar {
+  width: var(--sidebar-width);
+  background: var(--sidebar-bg);
+  color: var(--text-dark);
+  border-right: 1px solid var(--sidebar-border);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  padding: 1.5rem 1.25rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.admin-sidebar-brand {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--text-dark);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.admin-sidebar-brand .sparkle {
+  color: var(--primary-blush);
+}
+
+.badge-admin-pill {
+  border: 1px solid var(--primary-blush);
+  color: var(--primary-blush);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 3px 10px;
+  border-radius: 50px;
+  background: transparent;
+}
+
+.sidebar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0 0;
+}
+
+.sidebar-nav .nav-item {
+  margin-bottom: 4px;
+}
+
+.sidebar-nav .nav-link {
+  color: var(--text-muted) !important;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0.7rem 1.1rem !important;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.sidebar-nav .nav-link:hover, 
+.sidebar-nav .nav-link.active {
+  background: var(--sidebar-active-bg);
+  color: var(--text-dark) !important;
+  font-weight: 600;
+  transform: none;
+}
+
+.admin-content {
+  margin-left: var(--sidebar-width);
+  flex: 1;
+  padding: 2rem;
+}
+
+.metric-card {
+  background: #FFF;
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid #F0D8E0;
+  box-shadow: 0 4px 14px rgba(74, 21, 37, 0.04);
+  transition: transform 0.2s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-3px);
+}
+
+.metric-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.icon-pink { background: #FDE8ED; color: #E87A90; }
+.icon-gold { background: #FFF8E6; color: #D4AF37; }
+.icon-purple { background: #F3E8FD; color: #8E24AA; }
+.icon-green { background: #E8F5E9; color: #2E7D32; }
+
+.status-badge {
+  padding: 0.35rem 0.85rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.status-pending { background: #FFF3CD; color: #856404; }
+.status-confirmed { background: #D4EDDA; color: #155724; }
+.status-completed { background: #CCE5FF; color: #004085; }
+.status-cancelled { background: #F8D7DA; color: #721C24; }
+.status-rescheduled { background: #E2E3E5; color: #383D41; }
