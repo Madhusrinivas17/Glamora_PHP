@@ -80,11 +80,6 @@
             <i class="bi bi-journal-text"></i> Customer History
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link <?= $this->request->getParam('controller') === 'Reviews' ? 'active' : '' ?>" href="<?= $this->Url->build('/admin/reviews') ?>">
-            <i class="bi bi-chat-heart"></i> Customer Reviews
-          </a>
-        </li>
         <li class="nav-item border-top pt-2 mt-2">
           <a class="nav-link text-danger" href="<?= $this->Url->build('/logout') ?>">
             <i class="bi bi-box-arrow-left"></i> Logout
